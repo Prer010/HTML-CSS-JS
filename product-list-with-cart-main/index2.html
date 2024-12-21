@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts Shop</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <h1>Desserts</h1>
+            <div class="products-grid" id="products"></div>
+        </main>
+
+        <aside class="order-section">
+            <div class="cart">
+                <div class="cart-title">
+                    <h2>Your Cart (<span id="cart-count">0</span>)</h2>
+                </div>
+                <div class="cart-items" id="cart-items"></div>
+                <div class="cart-total">
+                    <div class="cart-total-row">
+                        <strong>Order Total</strong>
+                        <strong id="cart-total">$0.00</strong>
+                    </div>
+                    <button class="btn btn-confirm" id="confirm-order">Confirm Order</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="modal" id="order-modal">
+        <div class="modal-content">
+            <h2>Order Confirmed</h2>
+            <p>We hope you enjoy your food!</p>
+            <div id="order-summary"></div>
+            <button class="btn btn-confirm" id="start-new-order">Start New Order</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index2.js"></script>
+</body>
+</html>
+

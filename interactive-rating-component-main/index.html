@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+.overpass-bold {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.overpass-light {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+    body {
+      background-color: hsl(216, 12%, 8%);
+    }
+
+.container {
+  background-color: hsl(213, 19%, 18%);
+  display : flex;
+  flex-direction: column;
+  gap : 10px;
+  border-radius: 10%;
+  color : white;
+  height : 400px;
+  width : 400px;
+  padding : 40px;
+  position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers {
+  display : flex;
+  gap : 25px;
+}
+
+.rating {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  padding : 10px;
+  background-color: hsl(217, 12%, 63%, .2);
+  color : white;
+  font-size : 15px;
+  text-align: auto;
+  opacity : 60%;
+  cursor : pointer;
+}
+
+button.rating:hover {
+background-color: white;
+opacity : 100%;
+color : hsl(216, 12%, 8%);
+font-weight: 500;
+}
+
+.active {
+  background-color: hsl(25, 97%, 53%);
+  opacity : 100%;
+color : hsl(216, 12%, 8%);
+font-weight: 500;
+}
+
+button.submit:hover {
+background-color: white;
+opacity : 100%;
+color : hsl(216, 12%, 8%);
+font-weight: 800;
+}
+
+button.submit:active {
+  background-color: hsl(25, 97%, 53%);
+  opacity : 100%;
+color : hsl(216, 12%, 8%);
+font-weight: 800;
+}
+
+.image {
+  border-radius : 50%;
+height: 45px;
+  width: 45px;
+display: flex; justify-content: center; align-items: center;
+}
+
+img {
+  height : 20px;
+  width : 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding : 10px;
+}
+
+.submit {
+  width : 100%;
+  display : block;
+  margin : 20px;
+  background-color: hsl(25, 97%, 53%);
+  color : black;
+  padding-top : 10px;
+  padding-bottom : 10px;
+  border-radius : 999px;
+  font-size : 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor : pointer;
+  
+}
+
+p {
+  opacity : 50%;
+}
+
+.thank-you {
+  height : 150px;
+  width : 200px;
+}
+
+.ty-rating {
+  display: none;
+  visibility: hidden;
+  background-color: hsl(217, 12%, 63%, .2);
+  padding : 10px;
+  border-radius: 999px;
+  color : hsl(25, 97%, 53%);
+  font-weight: 400;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+  </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Rating state start -->
+<div class = "container">
+<div class = "image" style = "align-self: baseline ; background-color: hsl(217, 12%, 63% , .2)"><img src = "./images/icon-star.svg"></div>
+<div class="ty-rating overpass-light"></div>
+
+<div>
+  <h1 class = "overpass-bold">How did we do?</h1>
+
+  <p class = "overpass-light">Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!</p>
+</div>
+
+  <div class = "numbers">
+    <button class = "rating overpass-light"> 1 </button>
+
+    <button class = "rating overpass-light"> 2 </button>
+
+    <button class = "rating overpass-light"> 3 </button>
+
+    <button class = "rating overpass-light"> 4 </button>
+
+    <button class = "rating overpass-light"> 5 </button>
+
+</div>
+
+<button class = "submit overpass-light">SUBMIT</button>
+</div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+
+  Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!
+
+  <!-- Thank you state end -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src = "./index.js" charset = "utf-8"></script>
+</body>
+</html>
